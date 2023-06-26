@@ -1,0 +1,10 @@
+class Solution:
+    def nonrepeat(self,s):
+        s1=set()
+        for i in range(len(s)):
+            if s[i] not in s1:
+                s1.add(s[i])
+                if s[i] not in s[i+1:]:
+                    return s.index(s[i])
+        return -1
+print(Solution().nonrepeat('aabb'))
